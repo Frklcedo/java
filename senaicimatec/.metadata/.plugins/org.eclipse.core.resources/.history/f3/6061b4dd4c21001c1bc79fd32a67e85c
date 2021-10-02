@@ -1,0 +1,111 @@
+package br.senai;
+
+import java.util.Scanner;
+
+import conta.Conta;
+
+public class Programa {
+
+	public static void main(String[] args) {
+		
+		// Declaração de variáveis
+		int op,op2;
+		double pDepot;
+		Scanner Enter = new Scanner(System.in);
+		Conta minhaConta = new Conta();
+		Conta minhaConta2 = new Conta();
+		
+		minhaConta.abrirConta();
+		minhaConta.setDono("Anderson");
+		minhaConta.setNumero(0001);
+		minhaConta.depositar(20000);
+		minhaConta.setLimite(2500);
+		minhaConta.depositar(500);
+		
+		do {
+			System.out.println("\nSelecione a operação de escolha:");
+			System.out.println("\t1- Ativar conta");
+			System.out.println("\t2- Entrar em conta");
+			System.out.println("\t0- Encerrar programa");
+			op = Enter.nextInt();
+			if(op==0) {
+				break;
+			}
+			else {
+				if(op==1){
+					do {
+						System.out.println("\nAtivação de conta");
+						System.out.print("\t1- conta: " + minhaConta.getDono());
+						System.out.print(minhaConta.ativa()? " (Ativa)\n":"\n");
+						if(minhaConta2.getDono()==null) {
+							System.out.println("\t2 - Criar nova conta");
+						}
+						else {
+							System.out.print("\t2- conta: " + minhaConta2.getDono());
+							System.out.print(minhaConta2.ativa()? " (Ativa)\n":"\n");
+						}
+						System.out.println("\t0- Cancelar ativação de conta");
+						op2 = Enter.nextInt();
+						switch(op2) {
+						case 1:
+							if(minhaConta.ativa()) {
+								System.out.println("Conta já está ativa");
+							}
+							else {
+								minhaConta.abrirConta();
+								System.out.println("Conta ativada com sucesso");
+							}
+							break;
+						case 2: 
+							minhaConta2.abrirConta();
+							if(minhaConta2.getDono()==null) {
+								System.out.println("Digite o nome do dono da conta");
+								Enter.nextLine();
+								minhaConta2.setDono(Enter.nextLine());
+								System.out.println("Digite número para a conta");
+								minhaConta2.setNumero(Enter.nextInt());
+								System.out.println("Depósito inicial? (caso não, digitar \"0\")");
+								pDepot = Enter.nextDouble();
+								minhaConta2.depositar(pDepot);
+								minhaConta2.setLimite(pDepot);
+								minhaConta2.status();
+								System.out.println("Conta criada com sucesso");
+							}
+							else {
+								if(minhaConta.ativa()) {
+									System.out.println("Conta já está ativa");
+								}
+								else {
+									minhaConta.abrirConta();
+									System.out.println("Conta ativada com sucesso");
+								}
+							}
+							break;
+						case 0:
+							System.out.println("Ativação de conta cancelada");
+							break;
+						default: 
+							System.out.println("Opção inválida");
+							continue;
+						}
+						break;
+					}
+					while(true);
+				}
+				else {
+					if(op==2) {
+						
+					}
+					else {
+						System.out.println("Operação inválida");
+						continue;
+					}
+				}
+			}
+			
+		}
+		while(true);
+		System.out.println("Programa encerrado");
+	}
+
+}

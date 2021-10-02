@@ -1,0 +1,16 @@
+package testio1;
+
+import javax.swing.JOptionPane;
+
+public class Testio1 {
+
+	public static void main(String[] args) {
+		int idade;
+		String nome;
+		float n1,n2,n3,n4;
+		
+		JOptionPane.showMessageDialog(null,"Ola, seja bem vindo!!!")
+
+	}
+
+}

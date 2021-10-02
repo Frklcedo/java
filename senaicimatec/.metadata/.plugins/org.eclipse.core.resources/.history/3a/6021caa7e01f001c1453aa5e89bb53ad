@@ -1,0 +1,9 @@
+package conta;
+
+public class Conta {
+	private int numero;
+	private String dono;
+	private double saldo;
+	private double limite;
+	private boolean ativa;
+}

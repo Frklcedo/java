@@ -1,0 +1,91 @@
+package banco;
+
+import java.util.Scanner;
+
+import conta.Conta;
+
+public class Banco {
+
+	public static void main(String[] args) {
+		
+		
+		Scanner Enter = new Scanner(System.in);
+		Conta Account = new Conta();	
+		Conta Account1 = new Conta();		
+		int n = 1;
+		double iniDepos;
+		do {
+			System.out.println("Digite a operação desejada");
+			System.out.println("1- Criar conta");
+			System.out.println("2- Ativar conta");
+			System.out.println("3- Fechar conta");
+			System.out.println("4- Entrar em conta");
+			System.out.println("0- Finalizar operação");
+			n = Enter.nextInt();
+			switch(n) {
+			
+			case 1: if(Account.getContaAtiva() && (!Account.getContaCriada())) {
+						
+						System.out.println("Digite o nome usuário da conta");
+						Enter.nextLine();
+						Account.setNomeDaConta(Enter.nextLine());
+						System.out.println("Digite o número da conta");
+						Account.setNumDaConta(Enter.nextInt());
+						System.out.println("Digite seu depósito inicial");
+						iniDepos = Enter.nextDouble();
+						Account.setSaldo(iniDepos);
+						do {	
+							if(iniDepos<0) {
+								System.out.println("Valor inválido");
+							}
+							else {
+								if(iniDepos<=500) {
+									Account.setLimite(500);	
+								}
+								else {
+									Account.setLimite(500 + iniDepos*0.2);	
+								}
+							}
+						}
+						while(iniDepos<0);
+						Account.abrirConta();
+						Account.setContaCriada();
+						break;
+					}
+				else {
+					if(Account1.getContaAtiva() && (!Account1.getContaCriada())) {
+						System.out.println("Digite o nome usuário da conta");
+						Enter.nextLine();
+						Account1.setNomeDaConta(Enter.nextLine());
+						System.out.println("Digite o número da conta");
+						Account1.setNumDaConta(Enter.nextInt());
+						System.out.println("Digite seu depósito inicial");
+						iniDepos = Enter.nextDouble();
+						Account1.setSaldo(iniDepos);
+						do {	
+							if(iniDepos<0) {
+								System.out.println("Valor inválido");
+							}
+							else {
+								if(iniDepos<=500) {
+									Account1.setLimite(500);	
+								}
+								else {
+									Account1.setLimite(500 + iniDepos*0.2);	
+								}
+							}
+						}
+						while(iniDepos<0);
+						Account1.abrirConta();
+						Account1.setContaCriada();
+					}
+				}
+				break;
+			case 0: System.out.println("Sessão encerrada");	break;
+			default: System.out.println("Operação inválida");
+			}
+		}
+		while(n != 0);
+	}
+
+}

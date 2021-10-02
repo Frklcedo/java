@@ -1,0 +1,76 @@
+package conta;
+
+public class Conta {
+	
+	private int numero;
+	private String dono;
+	private double saldo;
+	private double limite;
+	private boolean ativa;
+	
+	//Status geral da conta
+	public void status() {
+		System.out.print("Status da conta: ");
+		System.out.println((this.ativa)? "Ativa":"Inativa");
+		System.out.println("Número da conta: " + this.numero);
+		System.out.println("Número da conta: " + this.dono);
+		this.consultarSaldo();
+	}	
+	
+	// Abertura e fechamento da conta
+	public void ativarConta() {
+		this.ativa = true;
+	}
+	public void fecharConta() {
+		this.ativa = false;
+	}
+	
+	// Número geral da conta
+	public int getNumero() {
+		return this.numero;
+	}
+	public void setNumero(int n) {
+		this.numero = n;
+	}
+	
+	// Dono da conta 
+	public String getDono() {
+		return this.dono;
+	}
+	public void setDono(String nome) {
+		this.dono = nome;
+	}
+	
+	// Consultar saldo, depositar, sacar e definir limite
+	public void consultarSaldo() {
+		if(this.ativa) {
+			System.out.println("Número da conta: " + this.saldo);
+			System.out.println("Número da conta: " + this.limite);
+		}
+		else {
+			System.out.println("CONTA INATIVA");
+		}
+	}
+	public void setLimite(double primeiroDeposito) {
+		if(primeiroDeposito<=500) {
+			this.limite+=500;
+		}
+		else {
+			this.limite+= 500+(primeiroDeposito*0.2);
+		}
+	}
+	public void sacar(double valor) {
+		if(this.ativa) {
+			if(valor<=this.saldo) {
+				
+			}
+			else {
+				System.out.println("Valor indisponível");
+			}
+		}
+		else {
+			System.out.println("Não é possível sacar de conta INATIVA");
+		}
+	}
+	
+}

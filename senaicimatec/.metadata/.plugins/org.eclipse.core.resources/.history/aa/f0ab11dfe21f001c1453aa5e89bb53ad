@@ -1,0 +1,21 @@
+package conta;
+
+public class Conta {
+	
+	private int numero;
+	private String dono;
+	private double saldo;
+	private double limite;
+	private boolean ativa;
+	
+	public void status() {
+		System.out.print("Status da conta: ");
+		System.out.println((this.ativa)? "Ativa":"Inativa");
+		System.out.println("Número da conta: " + this.numero);
+		System.out.println("Número da conta: " + this.dono);
+		System.out.println("Número da conta: " + this.saldo);
+		System.out.println("Número da conta: " + this.limite);
+	}	
+	
+	
+}
