@@ -1,4 +1,4 @@
-package ifelseatv;
+package maiorEMenor;
 
 import java.util.Scanner;
 

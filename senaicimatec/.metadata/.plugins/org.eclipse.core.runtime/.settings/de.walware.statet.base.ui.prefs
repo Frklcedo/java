@@ -1,7 +1,7 @@
-//editors/optionsParameters.background=40,42,54
-//editors/optionsParameters.foreground=248,248,242
-//editors/optionsProposals.background=40,42,54
-//editors/optionsProposals.foreground=248,248,242
-MatchingBrackets.color=68,71,90
+//editors/optionsParameters.background=40,44,53
+//editors/optionsParameters.foreground=171,178,191
+//editors/optionsProposals.background=40,44,53
+//editors/optionsProposals.foreground=171,178,191
+MatchingBrackets.color=75,78,85
 eclipse.preferences.version=1
 overriddenByCSS=,editors/optionsParameters.foreground,editors/optionsProposals.foreground,editors/optionsParameters.background,MatchingBrackets.color,editors/optionsProposals.background,

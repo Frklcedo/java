@@ -21,12 +21,12 @@
 #org-eclipse-egit-ui-StagingView StyledText,
 Form Section LayoutComposite StyledText
 {
-background-color: #1a1b23;
-color: #d6d8e1;
+background-color: #1a1e23;
+color: #d6dae1;
 }
 
 PushResultTable-SpellcheckableMessageAreaExtension StyledText {
-background-color: #272935;
-color: #d6d8e1;
+background-color: #272d35;
+color: #d6dae1;
 }
 

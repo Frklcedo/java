@@ -1,5 +1,2 @@
-AbstractTextEditor.Color.Background=40,42,54
-AbstractTextEditor.Color.Background.SystemDefault=false
-AbstractTextEditor.Color.SelectionBackground.SystemDefault=false
-AbstractTextEditor.Color.SelectionForeground.SystemDefault=false
+AbstractTextEditor.Color.Background=40,44,53
 eclipse.preferences.version=1

@@ -6,7 +6,7 @@
 	</section>
 	<section name="RefactoringStatusDialog">
 		<item key="DIALOG_WIDTH" value="800"/>
-		<item key="DIALOG_HEIGHT" value="461"/>
-		<item key="DIALOG_FONT_NAME" value="1|Noto Sans|10.0|0|GTK|1|"/>
+		<item key="DIALOG_HEIGHT" value="447"/>
+		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|9.0|0|GTK|1|"/>
 	</section>
 </section>
